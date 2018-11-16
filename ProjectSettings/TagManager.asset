@@ -7,6 +7,7 @@ TagManager:
   - SnakeHead
   - SnakeBody
   - Floor
+  - Orb
   layers:
   - Default
   - TransparentFX
