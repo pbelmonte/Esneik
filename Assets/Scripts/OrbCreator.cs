@@ -33,11 +33,6 @@ public class OrbCreator : MonoBehaviour {
         {
             CreateOrb();
         }
-
-        if (Input.GetAxisRaw("Vertical") == 1.0f)
-        {
-            Destroy(Orb);
-        }
     }
 
     void CreateOrb ()
@@ -46,7 +41,6 @@ public class OrbCreator : MonoBehaviour {
         float[] pos = positions[val / 28][val % 28];
         float z = pos[0];
         float x = pos[1];
-        Debug.Log("(" + z + ", " + x + ")");
         orbCopy = Instantiate(orb, new Vector3(x, 0.5f, z), Quaternion.identity);
         Orb = orbCopy.gameObject;
     }
